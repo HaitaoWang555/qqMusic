@@ -16,10 +16,28 @@
     <img src="images/logo.png" alt="Logo" id="logo">
     <div class="show-player">播放器</div>
   </header>
-  <div class="qq-slider" id="slider">
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="nav-item active" data-role="tab" data-view=".rec-view">推荐</li>
+      <li class="nav-item" data-role="tab" data-view=".rank-view">排行榜</li>
+      <li class="nav-item" data-role="tab" data-view=".search-view">搜索</li>
+    </ul>
+  </nav>
+  <div class="tab-contents">
+    <div class="rec-view tab-content">
+      <div class="qq-slider" id="slider">
+      </div>
+    </div>
+    <div class="rank-view tab-content hide">
+      排行版
+    </div>
+    <div class="search-view tab-content hide">
+      搜索
+    </div>
   </div>
-  <script src="javascripts/slider.js"></script>
-  <script src="javascripts/app.js"></script>
+    <script src="javascripts/tab.js"></script>
+    <script src="javascripts/slider.js"></script>
+    <script src="javascripts/app.js"></script>
 </body>
 
 </html>
