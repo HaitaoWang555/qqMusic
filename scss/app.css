@@ -126,6 +126,10 @@ i {
   color: #fff;
 }
 
+.navbar {
+  background: #fff;
+}
+
 .navbar .nav-list {
   display: flex;
   align-items: center;
@@ -181,6 +185,148 @@ i {
 
 .hide {
   display: none;
+}
+
+.radios,
+.playlists {
+  margin: 14px 2px 0 10px;
+}
+
+.radios .title,
+.playlists .title {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 11px;
+}
+
+.radios .list,
+.playlists .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radios .list .list-item,
+.playlists .list .list-item {
+  flex: 1;
+  flex-basis: 40%;
+  background: #fff;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+.radios .list .list-item .list-media,
+.playlists .list .list-item .list-media {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.radios .list .list-item .list-detail,
+.playlists .list .list-item .list-detail {
+  padding: 0 7px 5px;
+}
+
+.radios .list .list-item .list-title,
+.playlists .list .list-item .list-title {
+  font-size: 14px;
+}
+
+.radios .list .list-item .icon,
+.playlists .list .list-item .icon {
+  background-repeat: no-repeat;
+  background-size: 24px 60px;
+  background-image: url("../images/icon_play.png");
+}
+
+.radios .list .list-item .icon-play,
+.playlists .list .list-item .icon-play {
+  height: 24px;
+  bottom: 5px;
+  right: 5px;
+  width: 24px;
+  position: absolute;
+  background-position: 0 0;
+}
+
+.radios .list .list-item img,
+.playlists .list .list-item img {
+  width: 100%;
+  display: block;
+  min-height: 145px;
+}
+
+.radios .list-title {
+  height: 36px;
+}
+
+#rank-view {
+  margin: 10px;
+}
+
+.toplist .top-item {
+  height: 100px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.toplist .top-item-media {
+  float: left;
+}
+
+.toplist .top-item-media img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.toplist .top-item-info {
+  position: relative;
+  padding: 7px 10px 6px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toplist .top-item-info::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  width: 6px;
+  height: 6px;
+  transform: rotate(315deg);
+  border-right: 1px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.toplist .top-item-title {
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.toplist .top-item-list {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.toplist .top-item-list .top-item-song {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.toplist .top-item-list .song-index {
+  float: left;
+  min-width: 10px;
+  text-align: center;
+}
+
+.toplist .top-item-list .song-name {
+  color: #000;
+  margin-left: 8px;
+  margin-right: 5px;
 }
 
 body {
