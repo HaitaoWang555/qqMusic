@@ -6,7 +6,6 @@ function lazyload(images) {
   if ("IntersectionObserver" in window) {
     let observer = new IntersectionObserver(
       function(entries) {
-        console.log(entries);
         entries.forEach(entry => {
           if (entry.intersectionRatio > 0) {
             loadImage(entry.target, function() {
