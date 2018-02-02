@@ -1,9 +1,9 @@
 (function() {
-  fetch("/json/rec.json")
+  fetch("https://qq-music-api.now.sh/")
     .then(res => res.json())
     .then(render);
 
-  fetch("/json/rank.json")
+  fetch("https://qq-music-api.now.sh/top")
     .then(res => res.json())
     .then(json => json.data.topList)
     .then(renderTopList);
@@ -14,6 +14,15 @@
     renderPlaylists(json.data.songList);
     lazyload(document.querySelectorAll(".lazyload"));
   }
+
+  let $search = document.querySelector('#search')
+  $search.addEventListener('keydown', function(event) {
+    if (this.value.length &&event.key === 'Enter') {
+      fetch(`https://qq-music-api.now.sh/search?keyword=${this.value}`)
+        .then(res => res.json())
+        .then(console.log)
+    }
+  })
 
   function renderSlider(slides) {
     slides = slides.map(slide => ({
