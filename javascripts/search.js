@@ -1,7 +1,7 @@
-function searchUrl(keyword, page = 1) {
-  return `https://qq-music-api.now.sh/search?keyword=${keyword}&page=${page}`  
-}
-class Search {
+import { SEARCH_URL } from './constants.js';
+import { searchUrl } from './helpers.js'
+
+export class Search {
   constructor(el) {
     this.$el = el
     this.$input = this.$el.querySelector('#search')
@@ -14,7 +14,6 @@ class Search {
     this.nomore = false
     this.fetching = false
     this.onscroll = this.onScroll.bind(this)
-    window.addEventListener('scroll', this.onscroll)
   }
 
   onKeyUp(event) {
@@ -22,6 +21,7 @@ class Search {
     if (!keyword) return this.reset()
     if (event.keyCode !== 13) return
     this.search(keyword)
+    window.addEventListener('scroll', this.onscroll)
   }
 
   onScroll(event) {

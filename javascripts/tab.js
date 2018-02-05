@@ -15,6 +15,6 @@ document.addEventListener("click", function(event) {
       child.style.display = "none";
     });
     content.style.display = "block";
-    lazyload(document.querySelectorAll('#rank-view .toplist .lazyload'))
   }
+  window.dispatchEvent(new Event('scroll'))
 });
