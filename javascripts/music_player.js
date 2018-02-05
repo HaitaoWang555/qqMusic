@@ -70,7 +70,7 @@ class MusicPlayer {
     this.$el.querySelector('.song-artist').innerText = options.artist
     this.progress.reset(options.duration)
     
-    let coverUrl = albumCoverUrl(options.albummid)
+    let coverUrl = albumCoverUrl(options.albummid) 
     this.$el.querySelector('.album-cover').src = coverUrl
     this.$el.querySelector('.player-background').style.backgroundImage = `url(${coverUrl})`
 
@@ -79,11 +79,9 @@ class MusicPlayer {
         this.$el.querySelector('.icon-action').className = 'icon-action icon-play'
       }
       console.log(options);
-      this.albummid = options.albummid
-      console.log(this.albummid)
+      this.songmid = options.songmid
       this.songid = options.songid
-      console.log(this.songid)
-      this.$audio.src = songUrl(this.albummid)
+      this.$audio.src = songUrl(this.songmid)
       this.fetching = true
       fetch(lyricsUrl(this.songid))
         .then(res => res.json())
