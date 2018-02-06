@@ -12,8 +12,7 @@ export class Recommend {
     fetch(RECOMMEND_URL)
       .then(res => res.json())
       .then(json => (this.json = json))
-      .then(() => this.render())
-      .then(() => loading ())
+      .then(() => this.render());     
     return this;
   }
 
@@ -22,6 +21,7 @@ export class Recommend {
     this.renderRadios(this.json.data.radioList);
     this.renderPlayLists(this.json.data.songList);
     lazyload();
+    loading ();
   }
 
   renderSlider(slides) {
