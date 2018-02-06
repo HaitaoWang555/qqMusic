@@ -1,4 +1,10 @@
 .loading_box {
+  position: absolute;
+  top: 84px;
+  left: 0;
+  right: 0;
+  background-color: #f4f4f4;
+  z-index: 10;
   .loading {
     text-align: center;
     margin-top: 60px;
