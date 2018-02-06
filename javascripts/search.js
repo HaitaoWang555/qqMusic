@@ -95,6 +95,7 @@ export class Search {
       this.recordKeys.classList.add("hide");
       this.addHistory(this.keyword);
       this.search(this.keyword);
+      window.addEventListener("scroll", this.onscroll);
     }
   }
 
@@ -114,6 +115,10 @@ export class Search {
     this.keyword = "";
     this.nomore = false;
     this.$songs.innerHTML = "";
+    this.$el.querySelector(".search-loading").classList.remove("show");
+    this.$el.querySelector(".loading-icon").classList.remove("dis");
+    this.$el.querySelector(".loading-text").classList.remove("dis");
+    this.$el.querySelector(".loading-done").classList.add("hide");  
   }
 
   search(keyword, page) {
@@ -200,9 +205,10 @@ export class Search {
   done() {
     this.fetching = false;
     if (this.nomore) {
-      this.$el.querySelector(".loading-icon").style.display = "none";
-      this.$el.querySelector(".loading-text").style.display = "none";
-      this.$el.querySelector(".loading-done").style.display = "block";
+      this.$el.querySelector(".loading-icon").classList.add("dis");
+      this.$el.querySelector(".loading-text").classList.add("dis");
+      this.$el.querySelector(".loading-done").classList.remove("hide");
+      //this.$el.querySelector(".loading-done").style.display = "block";
       this.$el.querySelector(".search-loading").classList.add("show");
     } else {
       this.$el.querySelector(".search-loading").classList.remove("show");
