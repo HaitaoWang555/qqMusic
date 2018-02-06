@@ -1,3 +1,4 @@
+import { loading } from "./loading.js";
 import { Slider } from "./slider.js";
 import { lazyload } from "./lazyload.js";
 import { RECOMMEND_URL } from "./constants.js";
@@ -5,13 +6,14 @@ import { RECOMMEND_URL } from "./constants.js";
 export class Recommend {
   constructor(el) {
     this.$el = el;
-  }
+  } 
 
   launch() {
     fetch(RECOMMEND_URL)
       .then(res => res.json())
       .then(json => (this.json = json))
-      .then(() => this.render());
+      .then(() => this.render())
+      .then(() => loading ())
     return this;
   }
 

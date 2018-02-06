@@ -23,7 +23,7 @@
       <li class="nav-item" data-role="tab" data-view="#search-view">搜索</li>
     </ul>
   </nav>
-  <div class="tab-contents ">
+  <div class="tab-contents hide">
     <div id="rec-view" class="tab-content">
       <div class="qq-slider" id="slider"></div>
       <div class="radios">
@@ -77,7 +77,7 @@
     </div>
     <div class="player-background"></div>
   </div>
-  <div class="loading_box hide">
+  <div class="loading_box">
     <div class="loading">
       <img src="//y.gtimg.cn/mediastyle/mobile/yqq_v5/img/loading.gif?max_age=2592000">
       <p>页面正在努力加载中
@@ -88,7 +88,19 @@
   <script>
     !window.fetch && document.write('<script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"><\/script>')
   </script>
-  <script src="dist/app.js"></script>
+  <script type="module" src="javascripts/tab.js"></script>
+  <script type="module" src="javascripts/slider.js"></script>
+  <script type="module" src="javascripts/constants.js"></script>
+  <script type="module" src="javascripts/lazyload.js"></script>
+  <script type="module" src="javascripts/recommend.js"></script>
+  <script type="module" src="javascripts/toplist.js"></script>
+  <script type="module" src="javascripts/helpers.js"></script>
+  <script type="module" src="javascripts/search.js"></script>
+  <script type="module" src="javascripts/progress_bar.js"></script>
+  <script type="module" src="javascripts/lyrics_player.js"></script>
+  <script type="module" src="javascripts/music_player.js"></script>
+  <script type="module" src="javascripts/loading.js"></script>
+  <script type="module" src="javascripts/app.js"></script>
 </body>
 
 </html>
