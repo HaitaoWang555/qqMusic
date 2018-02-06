@@ -44,7 +44,12 @@
         <div class="input-wrap">
           <input id="search" type="text" placeholder="搜索歌曲、歌单、专辑">
           <span class="icon-search"></span>
+          <span class="icon-delete hide">删除</span>
         </div>
+        <div class="search-cancel hide">取消</div>
+      </div>
+      <div class="record-keys hide">
+                
       </div>
       <div class="search-results">
         <ul class="song-list"></ul>
@@ -53,6 +58,11 @@
         <i class="loading-icon"></i>
         <div class="loading-text">正在载入更多...</div>
         <div class="loading-done hide">已加载全部</div>
+      </div>
+      <div class="mod-search-result" id="hot-keys">
+        <h3 class="result-tit">热门搜索</h3>
+        <div class="result-tags">
+        </div>
       </div>
     </div>
   </div>
@@ -100,6 +110,7 @@
   <script type="module" src="javascripts/lyrics_player.js"></script>
   <script type="module" src="javascripts/music_player.js"></script>
   <script type="module" src="javascripts/loading.js"></script>
+  <script type="module" src="javascripts/hotkey.js"></script>
   <script type="module" src="javascripts/app.js"></script>
 </body>
 
