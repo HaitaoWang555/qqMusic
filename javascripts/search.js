@@ -92,6 +92,7 @@ export class Search {
       this.delete.classList.remove("hide");
       this.cancel.classList.remove("hide");
       this.hotKeys.classList.add("hide");
+      this.recordKeys.classList.add("hide");
       this.addHistory(this.keyword);
       this.search(this.keyword);
     }
