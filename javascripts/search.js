@@ -20,7 +20,7 @@ export class Search {
     this.recordKeys = document.querySelector(".record-keys"); //搜索记录
     this.onscroll = this.onScroll.bind(this);
 
-    window.addEventListener("click", this.onClick.bind(this));
+    this.$el.addEventListener("click", this.onClick.bind(this));
 
     this.HISTORY_KEY = "search_history";
     this.history = localStorage.getItem(this.HISTORY_KEY)
