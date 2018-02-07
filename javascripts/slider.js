@@ -162,11 +162,11 @@ export class Slider {
           let release = e.changedTouches[0];
           let releasedAt = release.clientX;
           let diff = releasedAt - _this.touchX;
-          if (diff > (_this.width / 2)) { //当右移滑动距离大于图片宽度的一半时
+          if (diff > (_this.width / 3)) { //当右移滑动距离大于图片宽度的一半时
               _this.pre();
               _this.autoPlay();
               _this.ready_moved = true;
-          } else if (diff < -(_this.width / 2)) { //当左移滑动距离小于宽度的一半时（-400px < -360px）
+          } else if (diff < -(_this.width / 3)) { //当左移滑动距离小于宽度的一半时（-400px < -360px）
               _this.next();
               _this.autoPlay();
               _this.ready_moved = true;
