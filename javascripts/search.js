@@ -44,7 +44,7 @@ export class Search {
   }
 
   onClick(e) {
-    // console.log(e.target);
+     alert(e.target);
     //如果点击到了输入按钮
     if (e.target === this.$input) {
       this.cancel.classList.remove("hide");
