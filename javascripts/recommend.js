@@ -20,10 +20,10 @@ export class Recommend {
     this.renderSlider(this.json.data.slider);
     this.renderRadios(this.json.data.radioList);
     this.renderPlayLists(this.json.data.songList);
-    lazyload();
+    lazyload(document.querySelectorAll("#rec-view .lazyload"));
     loading ();
   }
-
+ 
   renderSlider(slides) {
     this.slider = new Slider({
       el: this.$el.querySelector("#slider"),

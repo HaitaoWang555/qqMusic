@@ -3,22 +3,22 @@ export function lazyload(images) {
     ? [].slice.call(images) // Array.from(images)
     : document.querySelectorAll(".lazyload");
 
-  // if ("IntersectionObserver" in window) {
-  //   let observer = new IntersectionObserver(
-  //     function(entries) {
-  //       entries.forEach(entry => {
-  //         if (entry.intersectionRatio > 0) {
-  //           loadImage(entry.target, function() {
-  //             observer.unobserve(entry.target);
-  //           });
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.01 }
-  //   );
+  if ("IntersectionObserver" in window) {
+    let observer = new IntersectionObserver(
+      function(entries) {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio > 0) {
+            loadImage(entry.target, function() {
+              observer.unobserve(entry.target);
+            });
+          }
+        });
+      },
+      { threshold: 0.01 }
+    );
 
-  //   imgs.forEach(img => observer.observe(img));
-  // }
+    imgs.forEach(img => observer.observe(img));
+  } else {
     let onscroll = throttle(function() {
       if (imgs.length === 0) {
         return window.removeEventListener("scroll", onscroll);
@@ -29,7 +29,18 @@ export function lazyload(images) {
 
     window.addEventListener("scroll", onscroll);
     window.dispatchEvent(new Event("scroll"));
+  }
 
+  function filter(img) {
+    let { top, left, right, bottom } = img.getBoundingClientRect();
+    let windowWidth = document.documentElement.clientWidth;
+    let windowHeight = document.documentElement.clientHeight;
+    return (
+      ((top > 0 && top < windowHeight) ||
+        (bottom > 0 && bottom < windowHeight)) &&
+      ((left > 0 && left < windowWidth) || (right > 0 && right < windowWidth))
+    );
+  }
 
   function throttle(func, wait) {
     let prev, timer;
