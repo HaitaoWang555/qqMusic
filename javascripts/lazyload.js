@@ -30,18 +30,7 @@ export function lazyload(images) {
     window.addEventListener("scroll", onscroll);
     window.dispatchEvent(new Event("scroll"));
   }
-
-  function filter(img) {
-    let { top, left, right, bottom } = img.getBoundingClientRect();
-    let windowWidth = document.documentElement.clientWidth;
-    let windowHeight = document.documentElement.clientHeight;
-    return (
-      ((top > 0 && top < windowHeight) ||
-        (bottom > 0 && bottom < windowHeight)) &&
-      ((left > 0 && left < windowWidth) || (right > 0 && right < windowWidth))
-    );
-  }
-
+  
   function throttle(func, wait) {
     let prev, timer;
     return function fn() {
