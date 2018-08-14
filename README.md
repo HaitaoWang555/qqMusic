@@ -13,12 +13,12 @@
 
 ![play.gif](http://ox9zqgltc.bkt.clouddn.com/qqMusicShow/play.gif)
 
-4. 搜索功能
+4. [搜索功能](https://github.com/HaitaoWang555/qqMusic/blob/master/javascripts/search.js)
  可以搜索歌曲名
 
 ![search.gif](http://ox9zqgltc.bkt.clouddn.com/qqMusicShow/search.gif)
 
-5. 无缝轮播
+5. [无缝轮播](https://github.com/HaitaoWang555/qqMusic/blob/master/javascripts/slider.js)
 
 ![slider.gif](http://ox9zqgltc.bkt.clouddn.com/qqMusicShow/slider.gif)
 
