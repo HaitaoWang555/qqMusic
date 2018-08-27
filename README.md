@@ -3,6 +3,10 @@
 
 ![image.png](http://ox9zqgltc.bkt.clouddn.com/qqMusicShow/show.png)
 
+## 兄弟项目
+
+[网易云音乐](https://github.com/HaitaoWang555/neteaseMusic)
+
 ## 功能展示
 1.  [首页、tab切换](https://github.com/HaitaoWang555/qqMusic/blob/master/javascripts/tab.js)
 
